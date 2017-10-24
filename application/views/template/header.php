@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>revistas</title>
+        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://fonts.googleapis.com/css?family=News+Cycle:400,700'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://fonts.googleapis.com/css?family=Aldrich'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/journal/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://fonts.googleapis.com/css?family=News+Cycle:400,700'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://fonts.googleapis.com/css?family=Aldrich'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/fonts/font-awesome.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/fonts/ionicons.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Dynamic-Table.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Footer-Dark.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Navigation-Clean1.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
+    </head>
+
+    <body style="background-image:url(&quot;assets/img/bg.jpg&quot;);">
+        <div>
+            <nav class="navbar navbar-inverse navigation-clean" id="nav">
+                <div class="container">
+                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="<?php base_url();?>home"><i class="fa fa-book"></i>Revistas </a>
+                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li role="presentation"><a href="<?php base_url(); ?>home">Página Inical</a></li>
+                            <li role="presentation"><a href="#">Contato </a></li>
+                            <?php if(!$this->session->userdata('logado')){?>
+                            <li role="presentation"><a href="<?php echo base_url()?>usuario">Entrar </a></li>
+                            <?php }else{?>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Conta <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation"><a href="<?php base_url(); ?>hq"><i class="glyphicon glyphicon-plus"></i>Adicionar HQ</a></li>
+                                    <li role="presentation"><a href="#"><i class="glyphicon glyphicon-search"></i>Pesquisar </a></li>
+                                    <li class="divider" role="presentation"></li>
+                                    <li role="presentation"><a href="<?php base_url();?>usuario/sair"><i class="glyphicon glyphicon-log-out"></i>Sair </a></li>
+                                </ul>
+                            <?php }?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
