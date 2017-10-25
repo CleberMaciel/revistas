@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="2" assertions="6" failures="0" errors="0" time="0.023760">
+    <testsuite name="Leitura_model_test" file="/var/www/html/revistas/application/tests/models/Leitura_model_test.php" tests="1" assertions="3" failures="0" errors="0" time="0.013565">
+      <testcase name="teste_listarLeitura" class="Leitura_model_test" file="/var/www/html/revistas/application/tests/models/Leitura_model_test.php" line="9" assertions="3" time="0.013565"/>
+    </testsuite>
+    <testsuite name="Universo_model_test" file="/var/www/html/revistas/application/tests/models/Universo_model_test.php" tests="1" assertions="3" failures="0" errors="0" time="0.010195">
+      <testcase name="teste_listarUniverso" class="Universo_model_test" file="/var/www/html/revistas/application/tests/models/Universo_model_test.php" line="9" assertions="3" time="0.010195"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

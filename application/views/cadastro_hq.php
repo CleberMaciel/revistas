@@ -36,5 +36,5 @@
             <button class="btn btn-primary" type="reset" style="margin-bottom:-39px;margin-right:19px;margin-left:19px;">Resetar </button>
         </div>
     </div>
-</form>
+    <?php form_close(); ?>
 </div>
