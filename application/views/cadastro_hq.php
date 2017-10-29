@@ -1,10 +1,11 @@
 
 <div class="container" id="tabela" style="margin-top:40px;margin-bottom:40px;background-color:#ffffff;">
+
+    <br><br>
     <?php echo form_open('hq/inserir', 'id="form_hq"'); ?> 
     <fieldset style="height:50px;">
         <legend style="height:45px;">Cadastro de HQ</legend>
     </fieldset>
-    <input class="form-control" type="number" name="usuario" value="1" required="" placeholder="Número" min="1" max="200" step="1">
 
     <label>Titulo </label>
     <input class="form-control" type="text" name="titulo" required="" placeholder="Titulo" maxlength="50" minlength="1" autocomplete="on">

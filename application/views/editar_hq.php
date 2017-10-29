@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-md-12">
             <button class="btn btn-success" type="submit" style="margin-bottom:-39px;margin-left:45px;">Atualizar </button>
-            <button class="btn btn-primary" type="reset" style="margin-bottom:-39px;margin-right:19px;margin-left:19px;">Resetar </button>
+            <a class="btn btn-primary" type="button" style="margin-bottom:-39px;margin-right:19px;margin-left:19px;" href="<?php base_url(); ?>home">Voltar</a>
         </div>
     </div>
     <?php form_close(); ?>

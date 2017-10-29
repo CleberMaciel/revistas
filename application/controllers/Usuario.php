@@ -47,7 +47,13 @@ class Usuario extends CI_Controller {
         $data['usuario'] = $this->input->post('usuario');
         $data['senha'] = $this->input->post('senha');
         $this->usuario->inserir($data);
-        redirect('editora');
+        redirect('home');
+    }
+
+    public function cadastro() {
+        $this->load->view('template/header');
+        $this->load->view('cad_user');
+        $this->load->view('template/footer');
     }
 
 }

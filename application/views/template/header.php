@@ -18,32 +18,34 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/Footer-Dark.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/Navigation-Clean1.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Footer-Basic.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Navigation-with-Button1.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Navigation-clean.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Login-Form-Clean.css'); ?>">
     </head>
 
-    <body style="background-image:url(&quot;assets/img/bg.jpg&quot;);">
+    <body style="background-color:#d5d2d2;">
         <div>
-            <nav class="navbar navbar-inverse navigation-clean" id="nav">
+            <nav class="navbar navbar-default navbar-fixed-top navigation-clean-button">
                 <div class="container">
-                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="<?php base_url();?>home"><i class="fa fa-book"></i>Revistas </a>
+                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="<?php base_url(); ?>home">Revistas Online</a>
                         <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                     </div>
                     <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li role="presentation"><a href="<?php base_url(); ?>home">Página Inical</a></li>
-                            <li role="presentation"><a href="#">Contato </a></li>
-                            <?php if(!$this->session->userdata('logado')){?>
-                            <li role="presentation"><a href="<?php echo base_url()?>usuario">Entrar </a></li>
-                            <?php }else{?>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Conta <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li role="presentation"><a href="<?php base_url(); ?>hq"><i class="glyphicon glyphicon-plus"></i>Adicionar HQ</a></li>
-                                    <li role="presentation"><a href="#"><i class="glyphicon glyphicon-search"></i>Pesquisar </a></li>
-                                    <li class="divider" role="presentation"></li>
-                                    <li role="presentation"><a href="<?php base_url();?>usuario/sair"><i class="glyphicon glyphicon-log-out"></i>Sair </a></li>
-                                </ul>
-                            <?php }?>
-                            </li>
-                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li role="presentation"><a href="<?php base_url(); ?>home">Inicio </a></li>
+                            <?php if ($this->session->userdata('logado')) { ?>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Conta <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li role="presentation"><a href="<?php base_url(); ?>hq">Adicionar Comic</a></li>
+                                        <li class="divider" role="presentation"></li>
+                                        <li role="presentation"><a href="<?php base_url(); ?>usuario/sair">Sair </a></li>
+                                    </ul>
+                                </li>
+                            <?php } else { ?>
+                            </ul>
+                            <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="<?php base_url(); ?>usuario">Log In</a> <a class="btn btn-default action-button" role="button" href="<?php base_url(); ?>usuario/cadastro">Sign Up</a></p>
+                        <?php } ?>                
                     </div>
                 </div>
             </nav>

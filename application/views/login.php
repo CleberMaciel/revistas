@@ -6,18 +6,21 @@
                     <h3 class="panel-title">Entrar no sistema</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo form_open('usuario/login'); ?> 
-                    <fieldset>
+                    <div class="login-clean" style="background-color:#d5d2d2;">
+                        <?php echo form_open('usuario/login'); ?> 
+                        <h2 class="sr-only">Login Form</h2>
+                        <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Usuário" name="usuario" type="text" autofocus>
+                            <input class="form-control" type="text" name="usuario" placeholder="Usuario">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Senha" name="senha" type="password" value="">
+                            <input class="form-control" type="password" name="senha" placeholder="Password">
                         </div>
-                        <!-- Change this to a button or input when using this as a form -->
-                        <button class="btn btn-lg btn-success btn-block">Entrar</button>
-                    </fieldset>
-                    <?php echo form_close(); ?>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                        </div>
+                        <?php echo form_close(); ?>
+                    </div>
                 </div>
             </div>
         </div>
