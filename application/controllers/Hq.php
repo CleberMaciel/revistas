@@ -43,6 +43,9 @@ class Hq extends CI_Controller {
 
     function editar($id) {
         $data['editar_hq'] = $this->hq->editar($id);
+        $data['leitura'] = $this->leitura_model->listar();
+        $data['universo'] = $this->universo_model->listar();
+        $data['editora'] = $this->editora_model->listar();
         $this->load->view('template/header');
         $this->load->view('editar_hq', $data);
         $this->load->view('template/footer');
@@ -50,9 +53,14 @@ class Hq extends CI_Controller {
 
     function atualizar() {
         $data['id'] = $this->input->post('id');
-        $data['nome'] = $this->input->post('nome');
-        $data['sobrenome'] = $this->input->post('sobrenome');
-        $this->model->atualizar($data);
+        $data['titulo'] = $this->input->post('titulo');
+        $data['subtitulo'] = $this->input->post('subtitulo');
+        $data['numero'] = $this->input->post('numero');
+        $data['universo_id'] = $this->input->post('universo');
+        $data['leitura_id'] = $this->input->post('leitura');
+        $data['editora_id'] = $this->input->post('editora');
+        $this->hq->atualizar($data);
+        redirect('home');
     }
 
 }
