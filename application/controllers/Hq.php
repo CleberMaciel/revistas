@@ -36,4 +36,23 @@ class Hq extends CI_Controller {
         redirect('home');
     }
 
+    function excluir($id) {
+        $result = $this->hq->deletar($id);
+        redirect('home');
+    }
+
+    function editar($id) {
+        $data['editar_hq'] = $this->hq->editar($id);
+        $this->load->view('template/header');
+        $this->load->view('editar_hq', $data);
+        $this->load->view('template/footer');
+    }
+
+    function atualizar() {
+        $data['id'] = $this->input->post('id');
+        $data['nome'] = $this->input->post('nome');
+        $data['sobrenome'] = $this->input->post('sobrenome');
+        $this->model->atualizar($data);
+    }
+
 }

@@ -17,11 +17,6 @@ class Hq_model extends CI_Model {
         return $this->db->delete('hq');
     }
 
-//    function listar() {
-//        $lista = $this->db->get('hq');
-//        return $lista->result();
-//    }
-
     function listar($id) {
         $this->db->order_by('titulo', 'ASC');
         $this->db->order_by('numero', 'ASC');

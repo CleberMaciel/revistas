@@ -26,8 +26,8 @@
                         <td><?php echo $h->data; ?> </td>
 
                         <td style="width:200px;">
-                            <button class="btn btn-default btn-sm" type="button" style="margin-right:8px;background-color:rgb(7,7,7);">Editar </button>
-                            <button class="btn btn-default btn-sm" type="button" style="background-color:rgb(79,79,79);">Excluir </button>
+                            <a class="btn btn-default btn-sm" type="button" href="<?php echo base_url() . 'hq/editar/' . $h->id; ?>" style="margin-right:8px;background-color:rgb(7,7,7);">Editar </a>
+                            <a class="btn btn-default btn-sm" type="button" style="background-color:rgb(79,79,79);" href="<?php echo base_url() . 'hq/excluir/' . $h->id; ?>" >Excluir </a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
